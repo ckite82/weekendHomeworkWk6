@@ -22,26 +22,25 @@
 
             <div class="form-item">
                 <label for="super-bowls-won" class="primary">Super Bowls Won</label>
-                <input type="number" name="super-bowls-won" id="super-bowls-won">
+                <input type="number" name="rings" id="rings">
             </div>
 
             <div class="form-item">
                 <label for="qb-team" class="primary">QB Team</label>
-                <select id="qb-team">
+                <select id="team">
                     <option disabled selected>Select team</option>
                     <option value="Atlanta Falcons">Atlanta Falcons</option>
                     <option value="Carolina Panthers">Carolina Panthers</option>
                     <option value="New Orleans Saints">New Orleans Saints</option>
                     <option value="Tampa Bay Buccaneers">Tampa Bay Buccaneers</option>
+                </select>
             </div>
-
+            <input type="submit" value="Save">
+            <button id="delete-all">Delete All</button>
         </div>
-
     </form>
 
-    <button id="delete-all">Delete All</button>
-
-    <h1>Quarter Back List</h1>
+    <h2>Quarter Back List</h2>
     <ul id="qb-list"></ul>
 </body>
 </html>
