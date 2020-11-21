@@ -1,10 +1,72 @@
+/* changes all font throughout doc */ 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background: url('/css/images/logo.jpg');
+    background-size: 50%;
+    /* opacity: 0;
+    background-repeat: no-repeat; */
 }
 
+/* below changes the layout of the input boxes */
 #form-wrapper {
-    width: 100%
+    width: 100%;    
     display: flex;
     flex-direction: row;
+    margin-top: 0.1rem;
+    margin-left: 0.1rem;
 }
 
+.form-item {
+    margin-top: 0.75rem;
+    margin-right: 1.25rem;
+}
+
+/* below will rearrange the boxes below the input label, the margin adds some padding between the label and the box */
+label.primary {
+    display: block;
+    margin: 0.4em 0;
+}
+
+/* below will add a colon after the label name */
+label::after {
+    content: ":"
+}
+
+/* the below changes the "quarter back list" title */
+body > h2 {
+    color: red;
+    margin-left: 0.5rem;
+}
+
+/* the below will change the touchdown button, you have to specify the type=submit otherwise it changes the integer input boxes as well */
+button, input[type="submit"] {
+    color: red;
+}
+
+/* the below will change the erase button */
+#erase {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    color: blue;
+}
+
+/* the below will amend the rows of input boxes */
+#new-item-form{
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+/* changes the text of the input data that is saved and posted */
+#qb-list{
+    display: flex;
+    flex-wrap: wrap;
+    color: blue;
+}
+
+.qb-list-item {
+    margin: 1rem 1rem;
+    padding:  1rem 1rem;
+    border: 2px dotted #207c3c;
+    border-radius: 5%;
+    background: #ddeaff;
+}

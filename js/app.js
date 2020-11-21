@@ -1,3 +1,11 @@
+// querySelector = returns the first Element within the document that matches the 
+// specified selector, or group of selectors. If no matches are found, null is returned.
+
+// addEventListener = The EventTarget method addEventListener() sets up a function that
+// will be called whenever the specified event is delivered to the target. Common targets
+// are Element, Document, and Window.
+
+
 document.addEventListener('DOMContentLoaded', () => {
     
     console.log("content loaded");
@@ -5,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const newItemForm = document.querySelector('#new-item-form')
     newItemForm.addEventListener('submit', handleNewItemFormSubmit);
 
-    const delButton = document.querySelector('#delete-all');
+    const delButton = document.querySelector('#erase');
     delButton.addEventListener('click', handleDelButtonClick);
 
     // Text Input
@@ -21,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // integerInput2.addEventListener('input', handleInput);
 
     // Selector
-    // const selectorInput = document.querySelector('#qb-team');
+    // const selectorInput = document.querySelector('#team');
     // selectorInput.addEventListener('input', handleInput);
 
 })
@@ -38,30 +46,30 @@ const handleNewItemFormSubmit = function (event) {
 }
 
 const createQbListItem = function (form) {
-    const qbListItem = document.createElement("li");
+    const qbListItem = document.createElement('li');
     qbListItem.classList.add("qb-list-item");
 
-    const name = document.createElement("h4");
+    const name = document.createElement("h3");
     name.textContent = form.name.value;
     qbListItem.appendChild(name);
 
-    const age = document.createElement("h4");
+    const age = document.createElement("h3");
     age.textContent = form.age.value;
     qbListItem.appendChild(age);
 
-    const rings = document.createElement("h4");
+    const rings = document.createElement("h3");
     rings.textContent = form.rings.value;
     qbListItem.appendChild(rings);
 
-    const team = document.createElement("h4");
+    const team = document.createElement("h3");
     team.textContent = form.team.value;
     qbListItem.appendChild(team);
-    // didn't like it when I had qbTeam - find out why? Had to change everything to "team" instead.
+    // didn't like it when I used qbTeam as my ID - find out why? Had to change everything to "team" instead.
 
-    return qbListItem;
+    return qbListItem; // if you don't return, then the new list won't create.
 }
 
 const handleDelButtonClick = function (event) {
     const qbList = document.querySelector("#qb-list");
-    qbList.innerHTML = "";
+    qbList.innerHTML = "";  // not sure what this line of code does, query in the 1-2-1
 }
