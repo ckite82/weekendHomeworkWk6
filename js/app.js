@@ -66,6 +66,10 @@ const createQbListItem = function (form) {
     qbListItem.appendChild(team);
     // didn't like it when I used qbTeam as my ID - find out why? Had to change everything to "team" instead.
 
+    const conference = document.createElement("h3");
+    conference.textContent = form.conference.value;
+    qbListItem.appendChild(conference)
+
     return qbListItem; // if you don't return, then the new list won't create.
 }
 
